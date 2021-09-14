@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h1>Enter your address</h1>
+
+  <%= simple_form_for(@order) do |f|  %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :address %>
+    <%= f.input :postcode %>
+    <%= f.input :city %>
+    <%= f.input :country, as: :string%>
+    <%= f.input :order_number %>
+    <%= f.submit value: "Submit your shipping coordinates" %>
+  <% end %>
+</div>

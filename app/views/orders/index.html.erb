@@ -1,0 +1,13 @@
+<div class="container pt-3">
+  <h1>index of orders</h1>
+
+
+  <h3>there is <%= @orders.count %> order form filled</h3>
+  <% @orders.each_with_index do |order, index| %>
+    <%= index + 1 %>
+    <p>Name: <%= order.first_name %> <%= order.last_name %></p>
+    <p>Address: <%= order.address %> <%= order.postcode %> <%= order.city %> <%= order.country %></p>
+    <p>Order Number: <%= order.order_number %></p>
+    <br>
+  <% end %>
+</div>
